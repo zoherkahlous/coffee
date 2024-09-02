@@ -1,6 +1,7 @@
 import 'package:coffee/Barista.dart';
 import 'package:coffee/Coffee_country.dart';
 import 'package:coffee/Coffee_type.dart';
+import 'package:coffee/Recommendation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -31,9 +32,18 @@ class Additives extends StatelessWidget {
           ),
         ),
         actions: [
-          Icon(
-            Icons.shopping_cart,
-            color: Color(0xff001833),
+          InkWell(
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Recommendation()),
+              );
+
+            },
+            child: Icon(
+              Icons.shopping_cart,
+              color: Color(0xff001833),
+            ),
           ),
         ],
       ),
